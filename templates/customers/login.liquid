@@ -90,6 +90,7 @@
       <hr>
 
       <h2>{{ 'customer.login.guest_title' | t }}</h2>
+    <input type="hidden" name="checkout_url" id="redirect_url" value="" />
 
       {% form 'guest_login' %}
         <input type="submit" class="btn" value="{{ 'customer.login.guest_continue' | t }}">

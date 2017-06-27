@@ -1,0 +1,98 @@
+<style>
+  .header-bar-light {
+  	background: #e6e6e6;
+  }
+  
+  .wrapper__logo {
+	max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  
+  .header-light__img--logo {
+    padding: 10px 10px 0 10px;
+    max-width: 100%;
+	height: auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .wrapper__logo {
+	 text-align: center;
+  	}
+  }
+</style>
+
+<div>
+  <div class="header-bar-light">
+    <div class="wrapper__logo" >
+        
+      
+        <img src="{{ 'rich-stitzel-music-logo.png' | asset_url  }}" class="header-light__img--logo" alt="{{ shop.name }}" itemprop="logo">
+       
+      
+    </div>
+
+  </div>
+
+  
+</div>
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo",
+        "info": "450 x 200px recommended"
+      },
+      {
+        "type": "text",
+        "id": "logo_max_width",
+        "label": "Custom logo width (in pixels)",
+        "default": "450"
+      },
+      {
+        "type": "header",
+        "content": "Main menu"
+      },
+      {
+        "type": "link_list",
+        "id": "nav_menu",
+        "label": "Menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "checkbox",
+        "id": "nav_below_logo",
+        "label": "Center main menu below logo"
+      },
+      {
+        "type": "checkbox",
+        "id": "left_aligned_logo",
+        "label": "Left-align logo"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_header_lines",
+        "label": "Show divider lines in header"
+      },
+      {
+        "type": "header",
+        "content": "Top bar"
+      },
+      {
+        "type": "text",
+        "id": "header_text",
+        "label": "Top bar text",
+        "info": "Max 55 characters"
+      },
+      {
+        "type": "checkbox",
+        "id": "header_search_enable",
+        "label": "Show search bar"
+      }
+    ]
+  }
+{% endschema %}
